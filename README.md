@@ -72,15 +72,32 @@ Though there is always a room for improvement, listed below are few things which
 ## Snippets for reference explaining the flow of application:
 
 1. Registeration form
+![image](https://user-images.githubusercontent.com/87039860/224567732-be45093d-c2a2-4517-b9bc-92abf7817881.png)
+
 
 2. After successful resiteration, user automaticallly logged in
+![image](https://user-images.githubusercontent.com/87039860/224567779-6ca87fcf-04a0-412e-b625-72ca7efdbc65.png)
+
 
 3. If user sign outs, session invalidated and routed to login page
+![image](https://user-images.githubusercontent.com/87039860/224567820-aa03255a-7ccb-47eb-9a38-a50bea229173.png)
+
 
 4. After successful login, routed to home page. It displays a grid having details of previous uploads by all users
+![image](https://user-images.githubusercontent.com/87039860/224567787-72073ccd-74bd-4e0a-ba3a-ec3d12ab8cea.png)
+
 
 5. If a user uploads a file, it adds a record to the grid with status pending (GIF loader image)
+![image](https://user-images.githubusercontent.com/87039860/224567886-e83d9c1f-e5a6-45c3-b7f5-3ddb0721f694.png)
+
 
 6. Behind the scenes, records inserted in Mongo DB and status updated at both backend and frontend
+![image](https://user-images.githubusercontent.com/87039860/224567936-e9d99b10-1e3b-479d-af36-9ed7003674d8.png)
+
 
 7. Seperate uploads page to display only grid of uploads
+![image](https://user-images.githubusercontent.com/87039860/224568101-8701a7ca-57d7-41da-b6df-16358eca27b2.png)
+
+
+## Demo Video URL: 
+https://clipchamp.com/watch/YDQ43ztz612
