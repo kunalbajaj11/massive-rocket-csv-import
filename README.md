@@ -37,7 +37,7 @@ To run both server and client applications concurrently
   2.3. uploaded_data	// csv content in this mapped to userId and uploadId   -- 1 upload route, 1 get route with records where user ID and upload ID passed
 
 3. NodeJS:
-3.1. users route
+  3.1. users route
   3.2. auth route & middleware
   3.3. uploads : list of user uploaded documents
   3.4. On Uploading CSV:
