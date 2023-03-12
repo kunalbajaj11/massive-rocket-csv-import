@@ -25,12 +25,11 @@ To run both server and client applications concurrently
 
 ## Initial Approach (Planning Phase)
 1. React Routes:
-
-1.1. register page
-1.2. login page	// default
-1.3. dashboard	// having upload csv file option
-1.4. view all uploaded files	// previous file uploads done by all users
-1.5. view one upload details
+  1. register page
+  2. login page	// default
+  3. dashboard	// having upload csv file option
+  4. view all uploaded files	// previous file uploads done by all users
+  5. view one upload details
   
 2. MongoDB: 
   2.1. users	// maintaining login details
