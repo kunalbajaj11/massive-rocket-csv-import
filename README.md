@@ -24,26 +24,26 @@ To run both server and client applications concurrently
 
 
 ## Initial Approach (Planning Phase)
-1. React Routes:
-  1. register page
-  2. login page	// default
-  3. dashboard	// having upload csv file option
-  4. view all uploaded files	// previous file uploads done by all users
-  5. view one upload details
+##### React Routes:
+1. register page
+2. login page	// default
+3. dashboard	// having upload csv file option
+4. view all uploaded files	// previous file uploads done by all users
+5. view one upload details
   
-2. MongoDB: 
-  2.1. users	// maintaining login details
-  2.2. uploads	// having uploaded date, user by whom uploaded, number of records inserted and duplicates found		-- 3 routes - 1 post, 1 get all list of uploads
-  2.3. uploaded_data	// csv content in this mapped to userId and uploadId   -- 1 upload route, 1 get route with records where user ID and upload ID passed
+##### MongoDB: 
+1. users	// maintaining login details
+2. uploads	// having uploaded date, user by whom uploaded, number of records inserted and duplicates found		-- 3 routes - 1 post, 1 get all list of uploads
+3. uploaded_data	// csv content in this mapped to userId and uploadId   -- 1 upload route, 1 get route with records where user ID and upload ID passed
 
-3. NodeJS:
-  3.1. users route
-  3.2. auth route & middleware
-  3.3. uploads : list of user uploaded documents
-  3.4. On Uploading CSV:
-    3.4.1. 1st call to upload : sync would be in progress
-    3.4.2. Pass id returned to uploadData in refId
-    3.4.3. On completion: update request to upload with object id same as in ref id to complete or fail
+##### NodeJS:
+1. users route
+2. auth route & middleware
+3. uploads : list of user uploaded documents
+4. On Uploading CSV:
+  a) 1st call to upload : sync would be in progress
+  b) Pass id returned to uploadData in refId
+  c) On completion: update request to upload with object id same as in ref id to complete or fail
 
 ## Concepts Utilised
 
