@@ -23,6 +23,28 @@ To run both server and client applications concurrently
 **https://github.com/kunalbajaj11/massive-rocket-csv-import.git**
 
 
+## Initial Approach (Planning Phase)
+##### React Routes:
+1. register page
+2. login page	// default
+3. dashboard	// having upload csv file option
+4. view all uploaded files	// previous file uploads done by all users
+5. view one upload details
+  
+##### MongoDB: 
+1. users	// maintaining login details
+2. uploads	// having uploaded date, user by whom uploaded, number of records inserted and duplicates found		-- 3 routes - 1 post, 1 get all list of uploads
+3. uploaded_data	// csv content in this mapped to userId and uploadId   -- 1 upload route, 1 get route with records where user ID and upload ID passed
+
+##### NodeJS:
+1. users route
+2. auth route & middleware
+3. uploads : list of user uploaded documents
+4. On Uploading CSV:
+  a) 1st call to upload : sync would be in progress
+  b) Pass id returned to uploadData in refId
+  c) On completion: update request to upload with object id same as in ref id to complete or fail
+
 ## Concepts Utilised
 
 #### ReactJS : Created functional components and have implemented below hooks:
@@ -55,7 +77,7 @@ To run both server and client applications concurrently
 3. Used Atlas instead of local instance
 
 
-## Improvements could have made
+## Scope of improvements
 
 Though there is always a room for improvement, listed below are few things which could have been achieved:
 
@@ -72,15 +94,32 @@ Though there is always a room for improvement, listed below are few things which
 ## Snippets for reference explaining the flow of application:
 
 1. Registeration form
+![image](https://user-images.githubusercontent.com/87039860/224567732-be45093d-c2a2-4517-b9bc-92abf7817881.png)
+
 
 2. After successful resiteration, user automaticallly logged in
+![image](https://user-images.githubusercontent.com/87039860/224567779-6ca87fcf-04a0-412e-b625-72ca7efdbc65.png)
+
 
 3. If user sign outs, session invalidated and routed to login page
+![image](https://user-images.githubusercontent.com/87039860/224567820-aa03255a-7ccb-47eb-9a38-a50bea229173.png)
+
 
 4. After successful login, routed to home page. It displays a grid having details of previous uploads by all users
+![image](https://user-images.githubusercontent.com/87039860/224567787-72073ccd-74bd-4e0a-ba3a-ec3d12ab8cea.png)
+
 
 5. If a user uploads a file, it adds a record to the grid with status pending (GIF loader image)
+![image](https://user-images.githubusercontent.com/87039860/224567886-e83d9c1f-e5a6-45c3-b7f5-3ddb0721f694.png)
+
 
 6. Behind the scenes, records inserted in Mongo DB and status updated at both backend and frontend
+![image](https://user-images.githubusercontent.com/87039860/224567936-e9d99b10-1e3b-479d-af36-9ed7003674d8.png)
+
 
 7. Seperate uploads page to display only grid of uploads
+![image](https://user-images.githubusercontent.com/87039860/224568101-8701a7ca-57d7-41da-b6df-16358eca27b2.png)
+
+
+## Demo Video URL: 
+https://clipchamp.com/watch/YDQ43ztz612
